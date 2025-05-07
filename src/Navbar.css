@@ -1,0 +1,104 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 15px 0;
+  text-align: center;
+  z-index: 1000;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li {
+  position: relative;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+  color: #f4a261;
+}
+
+/* Estilos para los submenús */
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #444;
+  list-style: none;
+  padding: 10px;
+  min-width: 180px;
+  border-radius: 5px;
+}
+
+.submenu li {
+  padding: 10px;
+}
+
+.submenu a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+}
+
+.submenu a:hover {
+  background-color: #555;
+}
+
+/* Ajustes para el submenú de cuenta */
+.cuenta-submenu {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login-form input {
+  padding: 8px;
+  width: 150px;
+}
+
+.login-form button {
+  background-color: #f4a261;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.login-form button:hover {
+  background-color: #e76f51;
+}
+
+.registro-link {
+  margin-top: 10px;
+  color: white;
+  text-decoration: underline;
+  font-size: 16px;
+}
+
+.registro-link:hover {
+  color: #f4a261;
+}
