@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Registro.css"; // Importa el archivo CSS
+import "./Registro.css";
 
 const Registro = () => {
   const [formData, setFormData] = useState({
@@ -7,6 +7,7 @@ const Registro = () => {
     correo: "",
     contraseña: "",
     confirmarContraseña: "",
+    rol: "adoptante",
   });
 
   const handleChange = (e) => {
@@ -57,6 +58,18 @@ const Registro = () => {
           onChange={handleChange}
           required
         />
+
+        {/* Campo de selección para el rol */}
+        <label>Tipo de usuario:</label>
+        <select
+          name="rol"
+          value={formData.rol}
+          onChange={handleChange}
+          required
+        >
+          <option value="adoptante">Adoptante</option>
+          <option value="admin">Administrador</option>
+        </select>
 
         <button type="submit">Registrarse</button>
       </form>

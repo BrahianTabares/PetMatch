@@ -1,17 +1,40 @@
-.requisitos-container {
-  max-width: 600px;
+.registro-container {
+  max-width: 400px;
   margin: 50px auto;
   padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   background-color: #f9f9f9;
-  border-radius: 10px;
-  text-align: left;
+  text-align: center;
 }
 
-h2 {
-  color: #333;
+.registro-form {
+  display: flex;
+  flex-direction: column;
 }
 
-p {
-  font-size: 18px;
-  line-height: 1.5;
+.registro-form label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.registro-form input,
+.registro-form select {
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.registro-form button {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f4a261;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.registro-form button:hover {
+  background-color: #e76f51;
 }

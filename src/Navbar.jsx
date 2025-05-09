@@ -9,7 +9,9 @@ const Navbar = () => {
     <nav className="navbar">
       <ul className="nav-list">
         <li>
-          <a href="#nosotros">Nosotros</a>
+          <a href="/nosotros" target="_blank" rel="noopener noreferrer">
+            Nosotros
+          </a>
         </li>
 
         {/* Opción Adoptar con Submenú */}
