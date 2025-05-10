@@ -9,6 +9,9 @@ import Dashboard from "./dashboard";
 import NewPet from "./NewPet";
 import EditPet from "./EditPet";
 import { jwtDecode } from "jwt-decode";
+import Catalogo from "./Catalogo";
+import MascotaDetalles from "./MascotaDetalles";
+import Contacto from "./Contacto";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -44,6 +47,9 @@ root.render(
       <Route path="/pets/:id/edit" element={<EditPet />} />
       <Route path="/requisitos" element={<Requisitos />} />
       <Route path="/nosotros" element={<Nosotros />} />
+      <Route path="/catalogo" element={<Catalogo />} />
+      <Route path="/mascota/:id" element={<MascotaDetalles />} />
+      <Route path="/contacto" element={<Contacto />} />
     </Routes>
   </Router>
 );
