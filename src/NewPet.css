@@ -1,0 +1,50 @@
+.new-pet-container {
+  max-width: 500px;
+  margin: 5rem auto;
+  padding: 0.3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  font-family: 'Arial', sans-serif;
+}
+
+.new-pet-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.new-pet-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.new-pet-container label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  color: #555;
+}
+
+.new-pet-container input {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.new-pet-container button {
+  padding: 10px 16px;
+  background-color: #f4a261;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.new-pet-container button:hover {
+  background-color: #e76f51;
+}

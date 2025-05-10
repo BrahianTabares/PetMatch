@@ -1,0 +1,49 @@
+/* src/pages/admin/Dashboard.css */
+
+.dashboard-container {
+  max-width: 800px;
+    margin: 5rem auto;
+    padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dashboard-container h1,
+.dashboard-container h2 {
+  text-align: center;
+  color: #333;
+}
+
+.dashboard-container button {
+  background-color: #e76f51;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  margin: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dashboard-container button:hover {
+  background-color: #aa4931;
+}
+
+.pets-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.pets-list li {
+  background-color: white;
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
