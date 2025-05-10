@@ -1,6 +1,6 @@
 import React from "react";
 import "./Contacto.css";
-
+import VolverInicio from "./components/VolverInicio/VolverInicio";
 const Contacto = () => {
   return (
     <div className="contacto-container">
@@ -41,6 +41,8 @@ const Contacto = () => {
           Twitter
         </a>
       </p>
+
+      <VolverInicio />
     </div>
   );
 };

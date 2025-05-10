@@ -1,7 +1,7 @@
-import React from "react";
+/*import { React, Navigate } from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import App from "./App";
+import App from "./ContenedorCarrusel";
 import Registro from "./Registro";
 import Requisitos from "./Requisitos";
 import Nosotros from "./Nosotros";
@@ -52,4 +52,20 @@ root.render(
       <Route path="/contacto" element={<Contacto />} />
     </Routes>
   </Router>
+);*/
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+
+// Elimina o comenta esta línea si no usas reportWebVitals
+// import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter } from "react-router-dom";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>
 );

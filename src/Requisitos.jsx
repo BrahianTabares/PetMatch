@@ -1,5 +1,6 @@
 import React from "react";
-
+import VolverInicio from "./components/VolverInicio/VolverInicio";
+import "./Requisitos.css";
 const Requisitos = () => {
   return (
     <div className="requisitos-container">
@@ -16,6 +17,7 @@ const Requisitos = () => {
         cuidados.
       </p>
       <p>✅ Comprometerse a brindarle amor y atención de por vida.</p>
+      <VolverInicio />
     </div>
   );
 };

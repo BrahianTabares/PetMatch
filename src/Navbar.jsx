@@ -28,6 +28,15 @@ const Navbar = () => {
     }
   }, []);
 
+  // Efecto para redirigir después de iniciar sesión
+  /*useEffect(() => {
+    if (isLoggedIn && userRole === "administrator") {
+      navigate("/dashboard"); // Redirige a /dashboard para administradores
+    } else if (isLoggedIn && userRole !== "administrator") {
+      navigate("/"); // Cambiar de "/" a "/inicio" si esta es la vista principal
+    }
+  }, [isLoggedIn, userRole, navigate]);*/
+
   // Manejo del inicio de sesión
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -49,12 +58,7 @@ const Navbar = () => {
         setSubmenuCuenta(false);
         setEmail("");
         setPassword("");
-        // Redirigir solo si el usuario tiene rol de administrador
-        if (data.role === "administrator") {
-          navigate("/dashboard");
-        } else {
-          navigate("/"); // Redirigir a la vista principal para roles no administradores
-        }
+        setUserRole(data.role); // Asegúrate de actualizar el rol también
       } else {
         alert("Error: " + (data.message || "Credenciales incorrectas"));
       }
@@ -69,16 +73,19 @@ const Navbar = () => {
     localStorage.removeItem("token");
     setIsLoggedIn(false);
     setUserRole(null);
-    navigate("/");
+    navigate("/"); // Redirigir al inicio
   };
 
   return (
     <nav className="navbar">
       <ul className="nav-list">
         <li>
-          <a href="/nosotros" target="_blank" rel="noopener noreferrer">
+          <Link to="/">Inicio</Link>
+        </li>
+        <li>
+          <Link to="/nosotros" target="_blank" rel="noopener noreferrer">
             Nosotros
-          </a>
+          </Link>
         </li>
 
         {/* Mostrar solo si el rol es "administrator" */}
@@ -94,30 +101,36 @@ const Navbar = () => {
           onMouseEnter={() => setSubmenuAdoptar(true)}
           onMouseLeave={() => setSubmenuAdoptar(false)}
         >
-          <a href="#adoptar">Adoptar</a>
+          <Link to="#adoptar">Adoptar</Link>
           {submenuAdoptar && (
             <ul className="submenu">
               <li>
-                <a href="/requisitos" target="_blank" rel="noopener noreferrer">
+                <Link
+                  to="/requisitos"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Requisitos de Adopción
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/catalogo" target="_blank" rel="noopener noreferrer">
+                <Link
+                  to="/catalogo" /*target="_blank" rel="noopener noreferrer"*/
+                >
                   Conócelos Aquí
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#casos">Casos Exitosos</a>
+                <Link to="#casos">Casos Exitosos</Link>
               </li>
             </ul>
           )}
         </li>
 
         <li>
-          <a href="/Contacto" target="_blank" rel="noopener noreferrer">
+          <Link to="/Contacto" target="_blank" rel="noopener noreferrer">
             Contactanos
-          </a>
+          </Link>
         </li>
 
         {/* Menú de cuenta, muestra el login o el estado de sesión */}
@@ -126,7 +139,7 @@ const Navbar = () => {
           onMouseEnter={() => setSubmenuCuenta(true)}
           onMouseLeave={() => setSubmenuCuenta(false)}
         >
-          <a href="#cuenta">Cuenta</a>
+          <Link to="#cuenta">Cuenta</Link>
           {submenuCuenta && (
             <div className="submenu cuenta-submenu">
               {isLoggedIn ? (
@@ -155,14 +168,14 @@ const Navbar = () => {
                     />
                     <button type="submit">Iniciar Sesión</button>
                   </form>
-                  <a
-                    href="/registro"
+                  <Link
+                    to="/registro"
                     className="registro-link"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     Registrarse
-                  </a>
+                  </Link>
                 </>
               )}
             </div>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Registro.css";
-
+import VolverInicio from "./components/VolverInicio/VolverInicio";
 const Registro = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -95,6 +95,7 @@ const Registro = () => {
 
         <button type="submit">Registrarse</button>
       </form>
+      <VolverInicio />
     </div>
   );
 };

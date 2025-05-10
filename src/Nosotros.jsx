@@ -1,5 +1,6 @@
 import React from "react";
-
+import "./Nosotros.css";
+import VolverInicio from "./components/VolverInicio/VolverInicio";
 const Nosotros = () => {
   return (
     <div className="nosotros-container">
@@ -20,6 +21,7 @@ const Nosotros = () => {
         📅 También organizamos eventos de adopción y colaboramos con refugios
         locales.
       </p>
+      <VolverInicio />
     </div>
   );
 };

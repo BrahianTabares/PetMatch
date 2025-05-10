@@ -1,46 +1,58 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./MascotaDetalles.css";
-
-const detallesMascotas = {
-  1: {
-    nombre: "Max",
-    edad: "3 años",
-    descripcion: "Un perro amistoso y juguetón.",
-  },
-  2: {
-    nombre: "Luna",
-    edad: "2 años",
-    descripcion: "Gata cariñosa que ama dormir al sol.",
-  },
-  3: {
-    nombre: "Rocky",
-    edad: "4 años",
-    descripcion: "Perro protector y muy leal.",
-  },
-};
-
+import VolverInicio from "./components/VolverInicio/VolverInicio";
 const MascotaDetalles = () => {
   const { id } = useParams();
-  const mascota = detallesMascotas[id];
+  const [mascota, setMascota] = useState(null);
+  const [cargando, setCargando] = useState(true);
+  const [error, setError] = useState(null);
 
-  if (!mascota) {
-    return (
-      <h2 style={{ textAlign: "center", color: "red" }}>
-        ❌ Mascota no encontrada
-      </h2>
-    );
+  useEffect(() => {
+    const obtenerMascota = async () => {
+      try {
+        const respuesta = await fetch(`http://localhost:3001/api/pets/${id}`); // Ajusta el puerto según tu backend
+        if (!respuesta.ok) {
+          throw new Error("Mascota no encontrada");
+        }
+        const datos = await respuesta.json();
+        setMascota(datos);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setCargando(false);
+      }
+    };
+
+    obtenerMascota();
+  }, [id]);
+
+  if (cargando) {
+    return <h2 style={{ textAlign: "center" }}>Cargando...</h2>;
+  }
+
+  if (error) {
+    return <h2 style={{ textAlign: "center", color: "red" }}>❌ {error}</h2>;
   }
 
   return (
     <div className="mascota-detalles-container">
-      <h2>{mascota.nombre}</h2>
+      <h2>{mascota.name}</h2>
       <p>
-        <strong>Edad:</strong> {mascota.edad}
+        <strong>Edad:</strong> {mascota.age}
       </p>
       <p>
-        <strong>Descripción:</strong> {mascota.descripcion}
+        <strong>Especie:</strong> {mascota.species}
       </p>
+      <p>
+        <strong>Raza:</strong> {mascota.breed}
+      </p>
+      <p>
+        <strong>Descripción:</strong> {mascota.description}
+      </p>
+      <div>
+        <VolverInicio destino="/catalogo" />
+      </div>
     </div>
   );
 };
