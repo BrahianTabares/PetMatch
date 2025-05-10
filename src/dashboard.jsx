@@ -5,7 +5,7 @@ import "./Dashboard.css"; // Importa el CSS aquí
 import Navbar from "./Navbar";
 const Dashboard = () => {
   const [pets, setPets] = useState([]);
-
+  console.log("pets", pets);
   useEffect(() => {
     fetch("http://localhost:3001/api/pets")
       .then((res) => res.json())
