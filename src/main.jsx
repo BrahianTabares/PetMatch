@@ -5,6 +5,9 @@ import App from "./App";
 import Registro from "./Registro";
 import Requisitos from "./Requisitos";
 import Nosotros from "./Nosotros";
+import Catalogo from "./Catalogo";
+import MascotaDetalles from "./MascotaDetalles";
+import Contacto from "./Contacto";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -14,6 +17,9 @@ root.render(
       <Route path="/registro" element={<Registro />} />
       <Route path="/requisitos" element={<Requisitos />} />
       <Route path="/nosotros" element={<Nosotros />} />
+      <Route path="/catalogo" element={<Catalogo />} />
+      <Route path="/mascota/:id" element={<MascotaDetalles />} />
+      <Route path="/contacto" element={<Contacto />} />
     </Routes>
   </Router>
 );

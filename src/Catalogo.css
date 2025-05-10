@@ -1,0 +1,23 @@
+.catalogo-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.mascotas-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.mascota-card {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.mascota-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+}

@@ -30,7 +30,9 @@ const Navbar = () => {
               </li>
 
               <li>
-                <a href="#conocelos">Conócelos Aquí</a>
+                <a href="/catalogo" target="_blank" rel="noopener noreferrer">
+                  Conócelos Aquí
+                </a>
               </li>
               <li>
                 <a href="#casos">Casos Exitosos</a>
@@ -40,7 +42,9 @@ const Navbar = () => {
         </li>
 
         <li>
-          <a href="#contactanos">Contáctanos</a>
+          <a href="/Contacto" target="_blank" rel="noopener noreferrer">
+            Contactanos
+          </a>
         </li>
 
         {/* Opción Cuenta con Submenú */}

@@ -6,7 +6,20 @@ const datos = [
     id: 1,
     titulo: "Mascota en adopción",
     imagen: "/public/Imagenes/Perro.jpeg",
-    descripcion: "Conoce a Max, un perro amigable en busca de hogar.",
+    descripcion: "Conoce a Maximo, un perro amigable en busca de hogar.",
+  },
+  {
+    id: 4,
+    titulo: "Mascota en adopción",
+    imagen: "/public/Imagenes/Luna.jpg",
+    descripcion:
+      "Conoce a Luna, una hermosa gatica amigable en busca de hogar.",
+  },
+  {
+    id: 1,
+    titulo: "Mascota en adopción",
+    imagen: "/public/Imagenes/Rocky.jpg",
+    descripcion: "Conoce a Rocky, un perro amigable en busca de hogar.",
   },
   {
     id: 2,
