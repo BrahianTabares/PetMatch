@@ -2,12 +2,13 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Dashboard.css"; // Importa el CSS aquí
+import { API_URL } from "../src/api/config";
 import Navbar from "./Navbar";
 const Dashboard = () => {
   const [pets, setPets] = useState([]);
   console.log("pets", pets);
   useEffect(() => {
-    fetch("http://localhost:3001/api/pets")
+    fetch(`${API_URL}/api/pets`)
       .then((res) => res.json())
       .then((data) => setPets(data))
       .catch((error) => console.error("Error al cargar mascotas:", error));
