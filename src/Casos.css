@@ -1,0 +1,44 @@
+/* src/views/CasosExitosos.css */
+
+/* Contenedor principal de la vista */
+.casos-exitosos {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+/* Título de la página */
+.casos-exitosos h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Descripción de la sección */
+.casos-exitosos p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+/* Galería de imágenes */
+.galeria {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+/* Estilo de las imágenes */
+.galeria img {
+  width: 250px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}

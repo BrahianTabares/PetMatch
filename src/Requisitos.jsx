@@ -8,15 +8,14 @@ const Requisitos = () => {
       <p>
         Antes de adoptar, asegúrate de cumplir con los siguientes requisitos:
       </p>
-      <p>✅ Ser mayor de edad y presentar una identificación válida.</p>
+      <p> Ser mayor de edad y presentar una identificación válida.</p>
       <p>
-        ✅ Tener un espacio adecuado para la mascota y garantizar su bienestar.
+        Tener un espacio adecuado para la mascota y garantizar su bienestar.
       </p>
       <p>
-        ✅ Contar con los recursos económicos necesarios para cubrir sus
-        cuidados.
+        Contar con los recursos económicos necesarios para cubrir sus cuidados.
       </p>
-      <p>✅ Comprometerse a brindarle amor y atención de por vida.</p>
+      <p> Comprometerse a brindarle amor y atención de por vida.</p>
       <VolverInicio />
     </div>
   );

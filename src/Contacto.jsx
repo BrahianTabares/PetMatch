@@ -1,6 +1,7 @@
 import React from "react";
 import "./Contacto.css";
 import VolverInicio from "./components/VolverInicio/VolverInicio";
+import { Link } from "react-router";
 const Contacto = () => {
   return (
     <div className="contacto-container">
@@ -25,21 +26,21 @@ const Contacto = () => {
       <h3>Redes Sociales</h3>
       <p>
         📌{" "}
-        <a href="https://facebook.com/PetMatch" target="_blank">
+        <Link href="https://facebook.com/PetMatch" target="_blank">
           Facebook
-        </a>
+        </Link>
       </p>
       <p>
         📌{" "}
-        <a href="https://instagram.com/PetMatch" target="_blank">
+        <Link href="https://instagram.com/PetMatch" target="_blank">
           Instagram
-        </a>
+        </Link>
       </p>
       <p>
         📌{" "}
-        <a href="https://twitter.com/PetMatch" target="_blank">
+        <Link href="https://twitter.com/PetMatch" target="_blank">
           Twitter
-        </a>
+        </Link>
       </p>
 
       <VolverInicio />

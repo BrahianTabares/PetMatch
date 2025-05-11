@@ -5,20 +5,22 @@ const datos = [
   {
     id: 1,
     titulo: "Mascota en adopción",
-    imagen: "/PetMatch/Imagenes/Perro.jpeg",
-    descripcion: "Conoce a Maximo, un perro amigable en busca de hogar.",
+    imagen:
+      "https://media.es.wired.com/photos/657cb5b81e17b099f8f9e15c/16:9/w_3008,h_1692,c_limit/gatos%20172050389.jpg",
+    descripcion: "Conoce a Maximo, un gato amigable en busca de hogar.",
   },
   {
     id: 4,
     titulo: "Mascota en adopción",
-    imagen: "/PetMatch/Imagenes/Luna.jpg",
+    imagen: `https://nupec.com/wp-content/uploads/2021/02/Captura-de-pantalla-2021-02-08-a-las-13.59.48.png`,
     descripcion:
       "Conoce a Luna, una hermosa gatica amigable en busca de hogar.",
   },
   {
     id: 3,
     titulo: "Mascota en adopción",
-    imagen: "/PetMatch/Imagenes/Rocky.jpg",
+    imagen:
+      "https://upload.wikimedia.org/wikipedia/commons/8/8a/Golden_Retriever_9-year_old.jpg",
     descripcion: "Conoce a Rocky, un perro amigable en busca de hogar.",
   },
   {
@@ -30,7 +32,8 @@ const datos = [
   {
     id: 5,
     titulo: "Casos exitosos",
-    imagen: "https://via.placeholder.com/200",
+    imagen:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKICzfxTalbB0qBB9vX6z0VQeeEyxhFEXLrA&s",
     descripcion: "Mira historias felices de adopciones recientes.",
   },
 ];

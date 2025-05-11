@@ -121,7 +121,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <Link to="#casos">Casos Exitosos</Link>
+                <Link to="/Casos">Casos Exitosos</Link>
               </li>
             </ul>
           )}

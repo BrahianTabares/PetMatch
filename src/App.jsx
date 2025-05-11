@@ -12,7 +12,7 @@ import Catalogo from "./Catalogo";
 import MascotaDetalles from "./MascotaDetalles";
 import Contacto from "./Contacto";
 import Navbar from "./Navbar";
-
+import Casos from "./Casos";
 function App() {
   return (
     <div>
@@ -48,6 +48,7 @@ function App() {
         <Route path="/requisitos" element={<Requisitos />} />
         <Route path="/nosotros" element={<Nosotros />} />
         <Route path="/catalogo" element={<Catalogo />} />
+        <Route path="/casos" element={<Casos />} />
         <Route path="/mascota/:id" element={<MascotaDetalles />} />
         <Route path="/contacto" element={<Contacto />} />
       </Routes>
