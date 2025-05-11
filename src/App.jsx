@@ -4,7 +4,7 @@ import ContenedorCarrusel from "./ContenedorCarrusel";
 import Registro from "./Registro";
 import Requisitos from "./Requisitos";
 import Nosotros from "./Nosotros";
-import Dashboard from "./dashboard";
+import Dashboard from "./Dashboard";
 import NewPet from "./NewPet";
 import EditPet from "./EditPet";
 import { jwtDecode } from "jwt-decode";

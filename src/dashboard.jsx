@@ -1,8 +1,8 @@
 // src/pages/admin/Dashboard.jsx
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "./Dashboard.css"; // Importa el CSS aquí
-import { API_URL } from "../src/api/config";
+import "./Dashboard.css";
+import { API_URL } from "./api/config";
 import Navbar from "./Navbar";
 const Dashboard = () => {
   const [pets, setPets] = useState([]);
