@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import "./EditPet.css"; // Agregamos el archivo CSS
-import Navbar from "./Navbar"; // Asegúrate de importar el componente Navbar
+import "./EditPet.css";
+import Navbar from "./Navbar";
+import { API_URL } from "./api/config";
 const EditPet = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ const EditPet = () => {
   useEffect(() => {
     const fetchPetData = async () => {
       try {
-        const response = await fetch(`http://localhost:3001/api/pets/${id}`);
+        const response = await fetch(`${API_URL}/api/pets/${id}`);
         if (!response.ok) {
           throw new Error("No se pudo obtener los datos de la mascota");
         }
@@ -48,7 +49,7 @@ const EditPet = () => {
     const updatedData = { name, species, age, description }; // Agregar la edad al objeto
 
     try {
-      const response = await fetch(`http://localhost:3001/api/pets/${id}`, {
+      const response = await fetch(`${API_URL}/api/pets/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

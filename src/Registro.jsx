@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Registro.css";
 import VolverInicio from "./components/VolverInicio/VolverInicio";
+import { API_URL } from "./api/config";
 const Registro = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -25,7 +26,7 @@ const Registro = () => {
     const { name, email, password, role } = formData;
 
     try {
-      const response = await fetch("http://localhost:3001/api/users", {
+      const response = await fetch(`${API_URL}/api/users`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

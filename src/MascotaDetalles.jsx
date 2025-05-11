@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./MascotaDetalles.css";
 import VolverInicio from "./components/VolverInicio/VolverInicio";
+import { API_URL } from "./api/config";
 const MascotaDetalles = () => {
   const { id } = useParams();
   const [mascota, setMascota] = useState(null);
@@ -11,7 +12,7 @@ const MascotaDetalles = () => {
   useEffect(() => {
     const obtenerMascota = async () => {
       try {
-        const respuesta = await fetch(`http://localhost:3001/api/pets/${id}`); // Ajusta el puerto según tu backend
+        const respuesta = await fetch(`${API_URL}/api/pets/${id}`); // Ajusta el puerto según tu backend
         if (!respuesta.ok) {
           throw new Error("Mascota no encontrada");
         }

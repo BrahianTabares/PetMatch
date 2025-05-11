@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./NewPet.css";
 import Navbar from "./Navbar";
-
+import { API_URL } from "./api/config";
 const NewPet = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -28,7 +28,7 @@ const NewPet = () => {
     const token = localStorage.getItem("token"); // 🔐 obtenemos el token del localStorage
 
     try {
-      const response = await fetch("http://localhost:3001/api/pets", {
+      const response = await fetch(`${API_URL}/api/pets`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
