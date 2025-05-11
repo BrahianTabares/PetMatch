@@ -17,7 +17,7 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<ContenedorCarrusel />} />
+        <Route path="*" element={<ContenedorCarrusel />} />
         <Route path="/registro" element={<Registro />} />
         <Route
           path="/dashboard"
