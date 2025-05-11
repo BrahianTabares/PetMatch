@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import Carrusel from "./Carrusel";
-import "./ContenedorCarrusel.css"; // Asegúrate de tener este archivo CSS
+import "./ContenedorCarrusel.css";
 // AuthRedirect.jsx
 /*import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";

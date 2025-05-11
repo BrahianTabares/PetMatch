@@ -5,30 +5,30 @@ const datos = [
   {
     id: 1,
     titulo: "Mascota en adopción",
-    imagen: "/public/Imagenes/Perro.jpeg",
+    imagen: "/PetMatch/Imagenes/Perro.jpeg",
     descripcion: "Conoce a Maximo, un perro amigable en busca de hogar.",
   },
   {
     id: 4,
     titulo: "Mascota en adopción",
-    imagen: "/public/Imagenes/Luna.jpg",
+    imagen: "/PetMatch/Imagenes/Luna.jpg",
     descripcion:
       "Conoce a Luna, una hermosa gatica amigable en busca de hogar.",
   },
   {
-    id: 1,
+    id: 3,
     titulo: "Mascota en adopción",
-    imagen: "/public/Imagenes/Rocky.jpg",
+    imagen: "/PetMatch/Imagenes/Rocky.jpg",
     descripcion: "Conoce a Rocky, un perro amigable en busca de hogar.",
   },
   {
     id: 2,
     titulo: "Requisitos de adopción",
-    imagen: "/public/Imagenes/Requisitos.png",
+    imagen: "/PetMatch/Imagenes/Requisitos.png",
     descripcion: "Infórmate sobre cómo puedes adoptar una mascota.",
   },
   {
-    id: 3,
+    id: 5,
     titulo: "Casos exitosos",
     imagen: "https://via.placeholder.com/200",
     descripcion: "Mira historias felices de adopciones recientes.",
